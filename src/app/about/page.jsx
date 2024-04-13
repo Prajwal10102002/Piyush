@@ -31,7 +31,7 @@ const AboutPage = () => {
           <div className="flex flex-col gap-12 justify-center">
             {/* BIOGRAPHY IMAGE */}
             <Image
-              src="https://images.pexels.com/photos/775358/pexels-photo-775358.jpeg?auto=compress&cs=tinysrgb&w=800"
+              src="/profile.jpg"
               alt=""
               width={112}
               height={112}
@@ -41,10 +41,18 @@ const AboutPage = () => {
             <h1 className="font-bold text-2xl">BIOGRAPHY</h1>
             {/* BIOGRAPHY DESC */}
             <p className="text-lg">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-              harum quibusdam cupiditate nobis accusamus sed aut aperiam,
-              reiciendis numquam! Voluptas voluptatibus obcaecati dolore itaque
-              suscipit! Vel doloremque numquam quam nihil.
+              I am a Content Strategist and Brand Enthusiast with a strong
+              background in Copywriting and Screenwriting. Passionate about
+              storytelling that drives change, I am currently working with a
+              SaaS organization based in the United States, leading the creation
+              of branded content with our in-house studio. In the past, I've had
+              the privilege of working with esteemed brands such as Mitsubishi
+              Heavy Industries and QED Capital. I've also collaborated with
+              new-age startups and facilitated brand discovery sessions for
+              founders, helping them find the tone and voice for their brands. I
+              am looking forward to a Content Strategy/Specialist role in a SaaS
+              organization, where I can contribute my expertise and build great
+              brands.
             </p>
             {/* BIOGRAPHY QUOTE */}
             <span className="italic">
@@ -108,34 +116,34 @@ const AboutPage = () => {
               className="flex gap-4 flex-wrap"
             >
               <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                JavaScript
+                Conversion Copywriting
               </div>
               <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                TypeScript
+                Copy Editing
               </div>
               <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                React.js
+                Scriptwriting
               </div>
               <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                Next.js
+                Digital Copywriting
               </div>
               <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                SCSS
+                Copywriting
               </div>
               <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                Tailwind CSS
+                Ad Copywriting
               </div>
               <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                MongoDB
+                Email Copywriting
               </div>
               <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                PostgreSQL
+                Translation
               </div>
               <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                Node.js
+                Editing
               </div>
               <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                Nest.js
+                Brand Portfolio Management
               </div>
               <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
                 Express.js
@@ -180,7 +188,7 @@ const AboutPage = () => {
                 Git
               </div>
               <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                Figma
+                Business Strategy
               </div>
             </motion.div>
             {/* SKILL SCROLL SVG */}
@@ -233,7 +241,7 @@ const AboutPage = () => {
                 <div className="w-1/3 ">
                   {/* JOB TITLE */}
                   <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">
-                    Senior JavaScript Engineer
+                  Screenwriter
                   </div>
                   {/* JOB DESC */}
                   <div className="p-3 text-sm italic">
@@ -246,7 +254,7 @@ const AboutPage = () => {
                   </div>
                   {/* JOB COMPANY */}
                   <div className="p-1 rounded bg-white text-sm font-semibold w-fit">
-                    Apple
+                  Freelance
                   </div>
                 </div>
                 {/* CENTER */}
@@ -322,6 +330,7 @@ const AboutPage = () => {
                 {/* RIGHT */}
                 <div className="w-1/3 "></div>
               </div>
+              
             </motion.div>
           </div>
         </div>
