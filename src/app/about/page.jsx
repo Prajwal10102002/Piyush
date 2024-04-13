@@ -45,9 +45,9 @@ const AboutPage = () => {
               background in Copywriting and Screenwriting. Passionate about
               storytelling that drives change, I am currently working with a
               SaaS organization based in the United States, leading the creation
-              of branded content with our in-house studio. In the past, I've had
+              of branded content with our in-house studio. In the past, I ve had
               the privilege of working with esteemed brands such as Mitsubishi
-              Heavy Industries and QED Capital. I've also collaborated with
+              Heavy Industries and QED Capital. I ve also collaborated with
               new-age startups and facilitated brand discovery sessions for
               founders, helping them find the tone and voice for their brands. I
               am looking forward to a Content Strategy/Specialist role in a SaaS
