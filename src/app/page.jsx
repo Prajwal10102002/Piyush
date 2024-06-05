@@ -23,11 +23,11 @@ const Homepage = () => {
           <h1 className="text-4xl md:text-6xl font-bold">Piyush Nichat</h1>
           {/* DESC */}
           <p className="md:text-xl">
-            Hello, I'm Piyush, a Brand Consultant with a strong background in
+            Hello, I&apos;m Piyush, a Brand Consultant with a strong background in
             Copywriting. I specialize in crafting comprehensive brand strategies
             and developing compelling brand narratives. I can help you translate
             your vision through strategic insights, clear communication, and
-            creative design. Let's connect to explore how we can create an
+            creative design. Let&apos;s connect to explore how we can create an
             impactful and memorable brand presence for you.
             <br />
             <br />

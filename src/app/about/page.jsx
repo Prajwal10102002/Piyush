@@ -58,10 +58,10 @@ const AboutPage = () => {
             <p className="text-lg">
               Branding is the intricate process of creating a cohesive and
               compelling identity that resonates with your audience. As Seth
-              Godin explains, "A brand is the set of expectations, memories,
+              Godin explains, &quot;A brand is the set of expectations, memories,
               stories, and relationships that, taken together, account for a
               consumer’s decision to choose one product or service over
-              another."
+              another.&quot;
             </p>
             <p className="text-lg">
               Effective branding weaves together research, strong visual
