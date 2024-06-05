@@ -3,6 +3,7 @@ import Brain from "@/components/brain";
 import { motion, useInView, useScroll } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
+import { FaCheckCircle } from "react-icons/fa";
 
 const AboutPage = () => {
   const containerRef = useRef();
@@ -15,6 +16,20 @@ const AboutPage = () => {
 
   const experienceRef = useRef();
   const isExperienceRefInView = useInView(experienceRef, { margin: "-100px" });
+
+  const Section = ({ title, items }) => (
+    <div className="bg-white p-6 rounded-lg shadow-lg border-l-4 border-blue-500">
+      <h3 className="text-2xl font-bold mb-4">{title}</h3>
+      <ul className="list-disc list-inside space-y-2">
+        {items.map((item, index) => (
+          <li key={index} className="flex items-start">
+            <FaCheckCircle className="text-green-500 mr-1 h-5 w-5" /> {/* Set fixed size here */}
+            <span className="ml-1">{item}</span> {/* Use ml-1 to adjust spacing between icon and text */}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
 
   return (
     <motion.div
@@ -38,25 +53,26 @@ const AboutPage = () => {
               className="w-28 h-28 rounded-full object-cover"
             />
             {/* BIOGRAPHY TITLE */}
-            <h1 className="font-bold text-2xl">BIOGRAPHY</h1>
+            <h1 className="font-bold text-2xl">Why Take Branding Seriously?</h1>
             {/* BIOGRAPHY DESC */}
             <p className="text-lg">
-              I am a Content Strategist and Brand Enthusiast with a strong
-              background in Copywriting and Screenwriting. Passionate about
-              storytelling that drives change, I am currently working with a
-              SaaS organization based in the United States, leading the creation
-              of branded content with our in-house studio. In the past, I've had
-              the privilege of working with esteemed brands such as Mitsubishi
-              Heavy Industries and QED Capital. I've also collaborated with
-              new-age startups and facilitated brand discovery sessions for
-              founders, helping them find the tone and voice for their brands. I
-              am looking forward to a Content Strategy/Specialist role in a SaaS
-              organization, where I can contribute my expertise and build great
-              brands.
+              Branding is the intricate process of creating a cohesive and
+              compelling identity that resonates with your audience. As Seth
+              Godin explains, "A brand is the set of expectations, memories,
+              stories, and relationships that, taken together, account for a
+              consumer’s decision to choose one product or service over
+              another."
+            </p>
+            <p className="text-lg">
+              Effective branding weaves together research, strong visual
+              identity, clear communication, and consistent engagement across
+              all touchpoints. When these elements align seamlessly, they work
+              together to create a powerful and unified brand presence.
             </p>
             {/* BIOGRAPHY QUOTE */}
             <span className="italic">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              With the strategic effort of branding you can ensure your business
+              stands out and thrives.
             </span>
             {/* BIOGRAPHY SIGN SVG*/}
             <div className="self-end">
@@ -107,7 +123,7 @@ const AboutPage = () => {
               transition={{ delay: 0.2 }}
               className="font-bold text-2xl"
             >
-              SKILLS
+              SERVICES
             </motion.h1>
             {/* SKILL LIST */}
             <motion.div
@@ -115,7 +131,7 @@ const AboutPage = () => {
               animate={isSkillRefInView ? { x: 0 } : {}}
               className="flex gap-4 flex-wrap"
             >
-              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+              {/* <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
                 Conversion Copywriting
               </div>
               <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
@@ -189,6 +205,65 @@ const AboutPage = () => {
               </div>
               <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
                 Business Strategy
+              </div> */}
+
+              <div className="space-y-8">
+                <Section
+                  title="Brand Strategy Consulting"
+                  items={[
+                    "In-depth consultations to understand business goals and vision",
+                    "Development of comprehensive brand strategies",
+                    "Market research and competitive analysis",
+                  ]}
+                />
+                <Section
+                  title="Project Management"
+                  items={[
+                    "Coordination with agencies and freelancers",
+                    "Overseeing project timelines and deliverables",
+                    "Ensuring clear and consistent communication between all parties",
+                  ]}
+                />
+                <Section
+                  title="Brand Identity Design"
+                  items={[
+                    "Development of visual brand elements: logos, color schemes, typography",
+                    "Creation of brand guidelines for consistent use across all platforms",
+                    "Design of marketing materials and digital assets",
+                  ]}
+                />
+                <Section
+                  title="Website Development Coordination"
+                  items={[
+                    "Planning and guiding the creation of a user-friendly, visually appealing website",
+                    "Working with web designers and developers to ensure alignment with brand strategy",
+                    "Ensuring seamless integration of brand elements into the digital presence",
+                  ]}
+                />
+                <Section
+                  title="Content and Messaging Development"
+                  items={[
+                    "Crafting compelling brand narratives and key messages",
+                    "Developing a consistent brand voice across all platforms",
+                    "Providing guidance on content creation and storytelling",
+                  ]}
+                />
+                <Section
+                  title="Employee Brand Training"
+                  items={[
+                    "Conducting brand training sessions for employees",
+                    "Ensuring internal alignment with brand values and guidelines",
+                    "Providing resources and support for ongoing brand implementation",
+                  ]}
+                />
+                <Section
+                  title="Ongoing Brand Support"
+                  items={[
+                    "Offering continuous support to maintain brand consistency",
+                    "Providing updates and revisions to brand strategies as needed",
+                    "Acting as a brand guardian to ensure long-term brand integrity",
+                  ]}
+                />
               </div>
             </motion.div>
             {/* SKILL SCROLL SVG */}
@@ -227,34 +302,28 @@ const AboutPage = () => {
               transition={{ delay: 0.2 }}
               className="font-bold text-2xl"
             >
-              EXPERIENCE
+              HOW IT WORKS?
             </motion.h1>
             {/* EXPERIENCE LIST */}
+            First Consultation Call
             <motion.div
               initial={{ x: "-300px" }}
               animate={isExperienceRefInView ? { x: "0" } : {}}
               className=""
             >
               {/* EXPERIENCE LIST ITEM */}
-              <div className="flex justify-between h-48">
+              <div className="flex justify-between h-50">
                 {/* LEFT */}
                 <div className="w-1/3 ">
                   {/* JOB TITLE */}
                   <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">
-                  Screenwriter
+                    1. Book a Consultation Call
                   </div>
                   {/* JOB DESC */}
                   <div className="p-3 text-sm italic">
-                    I led web development, offering expertise in JavaScript
-                    frameworks.{" "}
-                  </div>
-                  {/* JOB DATE */}
-                  <div className="p-3 text-red-400 text-sm font-semibold">
-                    2024 - Present
-                  </div>
-                  {/* JOB COMPANY */}
-                  <div className="p-1 rounded bg-white text-sm font-semibold w-fit">
-                  Freelance
+                    Schedule a paid consultation call where we interact and
+                    learn about your requirements. This step is designed to
+                    provide you with direction and clarity.{" "}
                   </div>
                 </div>
                 {/* CENTER */}
@@ -269,7 +338,7 @@ const AboutPage = () => {
                 <div className="w-1/3 "></div>
               </div>
               {/* EXPERIENCE LIST ITEM */}
-              <div className="flex justify-between h-48">
+              <div className="flex justify-between h-50">
                 {/* LEFT */}
                 <div className="w-1/3 "></div>
                 {/* CENTER */}
@@ -284,39 +353,31 @@ const AboutPage = () => {
                 <div className="w-1/3 ">
                   {/* JOB TITLE */}
                   <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">
-                    Senior React Developer
+                    2. Custom Roadmap Proposal
                   </div>
                   {/* JOB DESC */}
                   <div className="p-3 text-sm italic">
-                    I spearheaded React-based application development,
-                    leveraging advanced skills.{" "}
-                  </div>
-                  {/* JOB DATE */}
-                  <div className="p-3 text-red-400 text-sm font-semibold">
-                    2019 - 2024{" "}
-                  </div>
-                  {/* JOB COMPANY */}
-                  <div className="p-1 rounded bg-white text-sm font-semibold w-fit">
-                    Microsoft
+                    We create and propose a custom roadmap tailored to help you
+                    achieve your objectives. This roadmap outlines the steps and
+                    strategies needed for your branding success.{" "}
                   </div>
                 </div>
               </div>
               {/* EXPERIENCE LIST ITEM */}
-              <div className="flex justify-between h-48">
+              <div className="flex justify-between h-50">
                 {/* LEFT */}
                 <div className="w-1/3 ">
                   {/* JOB TITLE */}
                   <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">
-                    Freelancer{" "}
+                    3. Clarity and Next Steps{" "}
                   </div>
                   {/* JOB DESC */}
                   <div className="p-3 text-sm italic">
-                    I provided web solutions, applying a range of technologies
-                    to address client requirements.{" "}
-                  </div>
-                  {/* JOB DATE */}
-                  <div className="p-3 text-red-400 text-sm font-semibold">
-                    2010 - 2019{" "}
+                    After the first consultation call, many clients gain clarity
+                    on their course of action and can proceed with their
+                    in-house teams. For those needing specific solutions, we
+                    arrange a follow-up call to dive deeper and plan the next
+                    steps.{" "}
                   </div>
                 </div>
                 {/* CENTER */}
@@ -328,10 +389,38 @@ const AboutPage = () => {
                   </div>
                 </div>
                 {/* RIGHT */}
+
                 <div className="w-1/3 "></div>
               </div>
-              
+              {/* EXPERIENCE LIST ITEM */}
+              <div className="flex justify-between h-50">
+                {/* LEFT */}
+                <div className="w-1/3 "></div>
+                {/* CENTER */}
+                <div className="w-1/6 flex justify-center">
+                  {/* LINE */}
+                  <div className="w-1 h-full bg-gray-600 rounded relative">
+                    {/* LINE CIRCLE */}
+                    <div className="absolute w-5 h-5 rounded-full ring-4 ring-red-400 bg-white -left-2"></div>
+                  </div>
+                </div>
+                {/* RIGHT */}
+                <div className="w-1/3 ">
+                  {/* JOB TITLE */}
+                  <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">
+                    4. Agreement and Execution
+                  </div>
+                  {/* JOB DESC */}
+                  <div className="p-3 text-sm italic">
+                    Once we are on the same page, we move forward with executing
+                    the plan. We coordinate with agencies or freelancers, manage
+                    the project, and ensure everything aligns with your brand
+                    vision.{" "}
+                  </div>
+                </div>
+              </div>
             </motion.div>
+            
           </div>
         </div>
         {/* SVG CONTAINER */}
